@@ -24,3 +24,54 @@ If you find any issues with the website or have suggestions for improvements, fe
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+**STEPS TO DO THE PROJECT**
+
+STEP 1: Create a EC2 Instance with the preferred AMI [E.g. Amazon Linux] and allowing https and http ports 
+
+STEP 2: Make a ssh connect either using the Amazon connect or MobaXterm 
+
+STEP 3: Go to the root directory by using 
+```bash
+sudo su
+cd ~
+```
+STEP 4: Update the pacakage manager and Install Apache Web Server
+
+```bash
+sudo yum update
+sudo yum install httpd -y
+```
+STEP 5:Start the Apache server
+```bash
+sudo systemctl enable httpd
+sudo systemctl start httpd
+```
+STEP 6:Install git
+```bash
+sudo yum update
+sudo yum install git -y
+```
+STEP 7: Navigate to wev root directory and Clone the repository
+```bash
+cd /var/www/html/
+sudo git clone https://github.com/your-username/DevOps_project1.git
+```
+STEP 8: Move the file  to the root of the web  directory
+```bash
+sudo mv /var/www/html/DevOps_project1/* /var/www/html/
+sudo rm -rf /var/www/html/DevOps_project1
+```
+STEP 9:Adjust Permissions of the file 
+```bash
+sudo chown -R apache:apache /var/www/html/
+sudo chmod -R 755 /var/www/html/
+```
+STEP 10:Now you can access the website by entering the Public IP of your EC2 instance
+
+**CONGRATULATIONS ON THE DEVOPS PROJECT**
+
+
+                
+                
+
