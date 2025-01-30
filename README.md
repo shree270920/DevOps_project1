@@ -62,12 +62,12 @@ STEP 8: Move the file  to the root of the web  directory
 sudo mv /var/www/html/DevOps_project1/* /var/www/html/
 sudo rm -rf /var/www/html/DevOps_project1
 ```
-STEP 9:Adjust Permissions of the file 
+STEP 9: Adjust Permissions of the file 
 ```bash
 sudo chown -R apache:apache /var/www/html/
 sudo chmod -R 755 /var/www/html/
 ```
-STEP 10:Now you can access the website by entering the Public IP of your EC2 instance
+STEP 10: Now you can access the website by entering the Public IP of your EC2 instance
 
 **CONGRATULATIONS ON THE DEVOPS PROJECT**
 
